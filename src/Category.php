@@ -17,7 +17,7 @@
 
         function getName()
         {
-            $this->name;
+            return $this->name;
         }
 
         function getId()
@@ -33,7 +33,7 @@
 
         static function getAll()
         {
-            $returne_categories = $GLOBALS['DB']->query("SELECT * FROM categories;");
+            $returned_categories = $GLOBALS['DB']->query("SELECT * FROM categories;");
             $categories = array();
             foreach($returned_categories as $category){
                 $name = $category['name'];
