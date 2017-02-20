@@ -62,13 +62,13 @@ class TaskTest extends PHPUnit_Framework_TestCase
 
 
         // Act
-        Task::getAll();
+        $result = Task::getAll();
 
         // Assert
 
-        $this->assertEquals($test_task, $test_task2, $result);
+        $this->assertEquals([$test_task, $test_task2], $result);
     }
-    
+
 
     function test_getId()
     {
@@ -84,7 +84,7 @@ class TaskTest extends PHPUnit_Framework_TestCase
         $test_task->save();
 
         // Act
-        $result = $test_Task->getId();
+        $result = $test_task->getId();
 
         // Assert
         $this->assertEquals(true, is_numeric($result));
