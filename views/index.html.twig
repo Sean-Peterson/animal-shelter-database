@@ -2,30 +2,30 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>To Do list</title>
+        <title>Animal Shelter</title>
     </head>
     <body>
         <h1>Welcom to To do list</h1>
 
-        <p>Create a new category:</p>
+        <p>New animal type:</p>
 
-        <form action="/categories" method="post">
-            <label for="name">Category name:</label>
+        <form action="/add_animal_type" method="post">
+            <label for="name">Animal Type:</label>
             <input id="name" type="text" name="name">
 
-            <button type="submit">Add Category</button>
+            <button type="submit">Create Animal Type</button>
         </form>
 
-        {% if categories is not empty %}
-            <p>Here are all your categories:</p>
+        {% if animal_types is not empty %}
+            <p>Here are all the types of animals:</p>
             <ul>
-                {% for category in categories %}
-                    <li><a href="/categories/{{category.getId}}">{{ category.getName }}</a></li>
+                {% for animal_type in animal_types %}
+                    <li><a href="/animal_type/{{animal_type.getId}}">{{ animal_type.getName }}</a></li>
                     {% endfor %}
             </ul>
         {% else %}
             <p>There are no categories yet!</p>
         {% endif %}
-        
+
     </body>
 </html>
