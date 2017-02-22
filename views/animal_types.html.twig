@@ -2,23 +2,22 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>To Do List</title>
+        <title>{{animal_type.getName}}</title>
     </head>
     <body>
         <h1>{{ animal_type.getName }}</h1>
 
         {% if animals is not empty %}
             <p>Here are the list of {{ animal_type.getName}}s:</p>
-            <ul>
                 {% for animal in animals %}
-                    <li>{{ animal.getName }}</li>
-                    <li>{{ animal.getBreed }}</li>
-                    <li>{{ animal.getGender }}</li>
-                    <li>{{ animal.getAdmittanceDate }}</li><br>
+                <h4>{{animal.getName}}</h4>
+                <ul>
+                    <li>Breed: {{ animal.getBreed }}</li>
+                    <li>Gender: {{ animal.getGender }}</li>
+                    <li>Admittance Date: {{ animal.getAdmittanceDate }}</li><br>
+                </ul>
                 {% endfor %}
-            </ul>
         {% endif %}
-
 
 
         <form action="/order/{{animal_type.getId}}" method="post">
