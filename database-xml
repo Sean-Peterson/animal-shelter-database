@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.4.10
+- http://www.phpmyadmin.net
+-
+- Host: localhost:8889
+- Generation Time: Feb 22, 2017 at 01:44 AM
+- Server version: 5.5.42
+- PHP Version: 5.6.10
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="animal_shelter" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="animal">
+                CREATE TABLE `animal` (
+                  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+                  `type_id` int(11) DEFAULT NULL,
+                  `breed` varchar(255) DEFAULT NULL,
+                  `name` varchar(255) DEFAULT NULL,
+                  `gender` varchar(255) DEFAULT NULL,
+                  `admittance_date` date DEFAULT NULL,
+                  PRIMARY KEY (`id`),
+                  UNIQUE KEY `id` (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="animal_type">
+                CREATE TABLE `animal_type` (
+                  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+                  `animal_type` varchar(255) DEFAULT NULL,
+                  PRIMARY KEY (`id`),
+                  UNIQUE KEY `id` (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'animal_shelter'
+    -->
+    <database name="animal_shelter">
+        <!-- Table animal -->
+        <table name="animal">
+            <column name="id">1</column>
+            <column name="type_id">1</column>
+            <column name="breed">Golden Retriever</column>
+            <column name="name">Roscoe</column>
+            <column name="gender">male</column>
+            <column name="admittance_date">2010-04-04</column>
+        </table>
+        <table name="animal">
+            <column name="id">2</column>
+            <column name="type_id">1</column>
+            <column name="breed">Golden Retriever</column>
+            <column name="name">Ziggy</column>
+            <column name="gender">femlae</column>
+            <column name="admittance_date">2011-04-04</column>
+        </table>
+        <table name="animal">
+            <column name="id">3</column>
+            <column name="type_id">1</column>
+            <column name="breed">Golden Retriever</column>
+            <column name="name">Alpha</column>
+            <column name="gender">femlae</column>
+            <column name="admittance_date">2001-04-04</column>
+        </table>
+        <table name="animal">
+            <column name="id">4</column>
+            <column name="type_id">1</column>
+            <column name="breed">Golden Retriever</column>
+            <column name="name">fred</column>
+            <column name="gender">male</column>
+            <column name="admittance_date">2011-04-06</column>
+        </table>
+        <table name="animal">
+            <column name="id">5</column>
+            <column name="type_id">1</column>
+            <column name="breed">Golden Retriever</column>
+            <column name="name">tim</column>
+            <column name="gender">male</column>
+            <column name="admittance_date">2011-03-06</column>
+        </table>
+        <table name="animal">
+            <column name="id">6</column>
+            <column name="type_id">2</column>
+            <column name="breed">main-coon</column>
+            <column name="name">Fluffs</column>
+            <column name="gender">male</column>
+            <column name="admittance_date">2015-10-10</column>
+        </table>
+        <table name="animal">
+            <column name="id">7</column>
+            <column name="type_id">2</column>
+            <column name="breed">main-can</column>
+            <column name="name">Fluffers</column>
+            <column name="gender">female</column>
+            <column name="admittance_date">2015-10-11</column>
+        </table>
+        <table name="animal">
+            <column name="id">8</column>
+            <column name="type_id">2</column>
+            <column name="breed">main-can</column>
+            <column name="name">Fluffs-alot</column>
+            <column name="gender">female</column>
+            <column name="admittance_date">2015-10-12</column>
+        </table>
+        <table name="animal">
+            <column name="id">9</column>
+            <column name="type_id">2</column>
+            <column name="breed">main-coon</column>
+            <column name="name">Fluff</column>
+            <column name="gender">male</column>
+            <column name="admittance_date">2015-10-13</column>
+        </table>
+        <table name="animal">
+            <column name="id">10</column>
+            <column name="type_id">0</column>
+            <column name="breed">laberdoodle</column>
+            <column name="name">spike</column>
+            <column name="gender">male</column>
+            <column name="admittance_date">1001-10-10</column>
+        </table>
+        <table name="animal">
+            <column name="id">11</column>
+            <column name="type_id">0</column>
+            <column name="breed">laberdoodle</column>
+            <column name="name">spike</column>
+            <column name="gender">male</column>
+            <column name="admittance_date">1001-10-10</column>
+        </table>
+        <table name="animal">
+            <column name="id">12</column>
+            <column name="type_id">1</column>
+            <column name="breed">laberdoodle</column>
+            <column name="name">spike</column>
+            <column name="gender">male</column>
+            <column name="admittance_date">1001-10-10</column>
+        </table>
+        <table name="animal">
+            <column name="id">13</column>
+            <column name="type_id">1</column>
+            <column name="breed">pug</column>
+            <column name="name">puggles</column>
+            <column name="gender">male</column>
+            <column name="admittance_date">1001-10-10</column>
+        </table>
+        <table name="animal">
+            <column name="id">14</column>
+            <column name="type_id">6</column>
+            <column name="breed">clown</column>
+            <column name="name">dory</column>
+            <column name="gender">non-binary</column>
+            <column name="admittance_date">0000-00-00</column>
+        </table>
+        <table name="animal">
+            <column name="id">15</column>
+            <column name="type_id">9</column>
+            <column name="breed">Water-Resevoir</column>
+            <column name="name">Hank</column>
+            <column name="gender">male</column>
+            <column name="admittance_date">2010-04-04</column>
+        </table>
+        <table name="animal">
+            <column name="id">16</column>
+            <column name="type_id">3</column>
+            <column name="breed">Blue Jay</column>
+            <column name="name">Blue</column>
+            <column name="gender">Male</column>
+            <column name="admittance_date">2017-02-15</column>
+        </table>
+        <!-- Table animal_type -->
+        <table name="animal_type">
+            <column name="id">1</column>
+            <column name="animal_type">dog</column>
+        </table>
+        <table name="animal_type">
+            <column name="id">2</column>
+            <column name="animal_type">cat</column>
+        </table>
+        <table name="animal_type">
+            <column name="id">3</column>
+            <column name="animal_type">bird</column>
+        </table>
+        <table name="animal_type">
+            <column name="id">4</column>
+            <column name="animal_type">lizard</column>
+        </table>
+        <table name="animal_type">
+            <column name="id">5</column>
+            <column name="animal_type">bunny</column>
+        </table>
+        <table name="animal_type">
+            <column name="id">6</column>
+            <column name="animal_type">fish</column>
+        </table>
+        <table name="animal_type">
+            <column name="id">7</column>
+            <column name="animal_type">rats</column>
+        </table>
+        <table name="animal_type">
+            <column name="id">8</column>
+            <column name="animal_type">Camel</column>
+        </table>
+        <table name="animal_type">
+            <column name="id">10</column>
+            <column name="animal_type">rock</column>
+        </table>
+    </database>
+</pma_xml_export>
