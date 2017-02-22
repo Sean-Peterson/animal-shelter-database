@@ -42,6 +42,14 @@
         return $app['twig']->render('index.html.twig', array('animal_types' => AnimalType::getAll()));
     });
 
+    $app->post("/add_animal/{id}", function($id) use ($app) {
+        $something = null;
+        $new_animal = new Animal($something, (int)$_POST['animal_type'], $_POST['breed'], $_POST['name'], $_POST['gender'], $_POST['date']);
+        $new_animal->save();
+        $animal_type= AnimalType::find($id);
+        return $app['twig']->render('animal_types.html.twig', array('animal_type' => $animal_type, 'animals' => $animal_type->getAnimals('admittance_date')));
+    });
+
 
 
 

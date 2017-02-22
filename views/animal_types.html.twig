@@ -21,7 +21,6 @@
 
 
 
-        <p><a href="/">Home</a></p>
         <form action="/order/{{animal_type.getId}}" method="post">
             <select class="" name="order">
                 <option value="name">name A-Z</option>
@@ -32,6 +31,20 @@
                 <option value="admittance_date desc">Newest Admittance Date</option>
             </select>
             <button type="submit" name="button">Sort</button>
+        </form><br>
+
+        <p><a href="/">Home</a></p><br>
+
+        <h3>Add a new {{animal_type.getName}}</h3>
+
+        <form action="/add_animal/{{animal_type.getId}}" method="post">
+            <input type="number" name="animal_type" placeholder="animal type" hidden="" value="{{animal_type.getId}}">
+            <input type="text" name="breed" placeholder="breed">
+            <input type="text" name="name" placeholder="name">
+            <input type="text" name="gender" placeholder="gender">
+            <input type="text" name="date" placeholder="today's date">
+            <button type="submit" name="button">add</button>
         </form>
+
     </body>
 </html>
